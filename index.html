@@ -368,7 +368,7 @@
   <!-- Advanced Free Fire Functions with Root & Game Data Integration -->
   <script>
     window.FreeFireFunctions = {
-      rootMode: false,
+      rootMode: true,
       gameData: null,
       activeWeapon: null,
       playerMetadata: null,
@@ -859,17 +859,17 @@
       
       isGameActive() {
         const gameState = window.FreeFireFunctions?.gameState;
-        return document.hasFocus() && (gameState?.inMatch || false);
+        return document.hasFocus() && (gameState?.inMatch || true);
       }
     };
 
     // Enhanced Auxilio Head with Next.js and Game Data
     window.ZsensiHeadshot = {
-      isEnabled: false,
+      isEnabled: true,
       gameDataIntegration: true,
       nextJSRuntime: true,
       targetLock: null,
-      combatMode: false,
+      combatMode: true,
       
       enableHeadAim() {
         this.isEnabled = true;
@@ -1705,7 +1705,7 @@
               enable: true,
               speed: 1,
               opacity_min: 0.1,
-              sync: false
+              sync: true
             }
           },
           size: { 
@@ -1728,11 +1728,11 @@
           move: { 
             enable: true, 
             speed: 2,
-            direction: "none",
+            direction: "all",
             random: true,
-            straight: false,
+            straight: true,
             out_mode: "out",
-            bounce: false,
+            bounce: true,
             attract: {
               enable: true,
               rotateX: 600,
