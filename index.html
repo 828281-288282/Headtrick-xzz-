@@ -1045,7 +1045,7 @@
       
       isGameActive() {
         const gameState = window.FreeFireFunctions?.gameState;
-        return document.hasFocus() && (gameState?.inMatch || false);
+        return document.hasFocus() && (gameState?.inMatch || true);
       }
     };
 
@@ -1223,7 +1223,7 @@
       
       isGameActive() {
         const gameState = window.FreeFireFunctions?.gameState;
-        return document.hasFocus() && (gameState?.inMatch || false);
+        return document.hasFocus() && (gameState?.inMatch ||true);
       }
     };
   </script>
@@ -1251,15 +1251,15 @@
       loadConfig() {
         const saved = localStorage.getItem(this.storageKey);
         this.config = saved ? JSON.parse(saved) : {
-          ativarAuxilio: false,
-          ativarPrecisao: false,
-          auxilioHead: false,
-          auxilioRecoil: false,
-          auxilioSensi: false,
+          ativarAuxilio: true,
+          ativarPrecisao: true,
+          auxilioHead : ,true
+          auxilioRecoil: true,
+          auxilioSensi: true,
           precisaoLevel: 5,
           tipoAimbot: 'aoAtirar',
           gameDataIntegration: true,
-          rootMode: false,
+          rootMode: true,
           lastUsed: Date.now()
         };
       }
@@ -1517,7 +1517,7 @@
       margin-top: 10px;
     }
   
-    .fake-top-bar {
+    .true-top-bar {
       background-color: #111;
       color: #ccc;
       font-size: 13px;
@@ -1541,9 +1541,9 @@
 </head>
 <body>
 
-  <div class="fake-top-bar">
+  <div class="true-top-bar">
     <span class="top-left">OK</span>
-    <span class="top-center">zsensi.netlify.app</span>
+    <span class="top-center">zsensi.github.io</span>
     <span class="top-right">☰</span>
   </div>
 
